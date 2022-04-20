@@ -236,7 +236,7 @@
         function toggleDarkTheme() {
             $html.classList.toggle('dark');
 
-            if ($html.classList.has('dark')) {
+            if ($html.classList.includes('dark')) {
                 localStorage.setItem('enableDarkTheme', true);
             }
         }
