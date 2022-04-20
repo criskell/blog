@@ -234,6 +234,7 @@
         const $navMobile = document.querySelector('.header__nav.mobile');
 
         function toggleDarkTheme() {
+            console.log('funcao darktheme chamadkakkkkkkkkkkkkkkkkkkkkkkkkkkkk');
             $html.classList.toggle('dark');
 
             if ($html.classList.contains('dark')) {
@@ -253,6 +254,7 @@
 
         try {
             if (localStorage.getItem('enableDarkTheme')) {
+                console.log('fui cahmado getitem enabledark');
                 toggleDarkTheme();
             }
         } catch (e) {
