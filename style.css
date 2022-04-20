@@ -10,6 +10,34 @@ body {
     background-color: #eee;
 }
 
+.dark body {
+    filter: invert(100%) hue-rotate(180deg);
+}
+
+.dark {
+    background-color: #111;
+}
+
+.dark img, .cover {
+    filter: invert(100%) hue-rotate(180deg);
+}
+
+.dark .icon {
+    filter: invert(15%) hue-rotate(180deg);
+}
+
+.dark pre {
+    filter: invert(6%);
+}
+
+.dark li::marker {
+    color: #666;
+}
+
+.dark img {
+    max-width: 100%;
+}
+
 .header__nav {
     display: flex;
     justify-content: center;
@@ -24,6 +52,7 @@ body {
 .header__nav > ul {
     list-style-type: none;
     display: flex;
+    align-items: center;
 }
 
 .header__nav > ul a {
@@ -162,4 +191,34 @@ button {
     outline: 0;
     cursor: pointer;
     color: #fff;
+}
+
+@media (max-width: 1200px) {
+    .posts {
+        max-width: 80%;       
+    }
+
+    .post__date {
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .post {
+        display: block;
+    }
+
+    .post__date {
+        padding-bottom: 20px;
+        margin-right: 0;
+        border-bottom: 1px solid #ccc;
+        border-radius: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .posts {
+        max-width: 95%;
+    }
 }
