@@ -16,9 +16,17 @@
         <div class="cover"></div>
         
         <nav class="header__nav">
-            <ul>
+            <div class="toggle-mobile-nav">
+                <svg viewBox="0 0 100 80" width="25" height="25">
+                    <rect width="100" height="20" rx="8"></rect>
+                    <rect y="30" width="100" height="20" rx="8"></rect>
+                    <rect y="60" width="100" height="20" rx="8"></rect>
+                </svg>
+            </div>
+
+            <ul class="nav-list">
                 <li>
-                    <a href="blog.html">Início</a>
+                    <a href="index.html">Início</a>
                 </li>
                 <li>
                     <a href="sobre.html">Sobre</a>
@@ -27,15 +35,34 @@
 
             <img src="https://c.tenor.com/tmNnUiYvzvUAAAAd/eren-eren-yeager.gif" alt="Eren Yeager falando" class="user-photo">
 
-            <ul>
+            <ul class="nav-list">
                 <li>
-                    <a href="blog.html">Posts</a>
+                    <a href="index.html">Posts</a>
                 </li>
                 <li>
                     <a href="contato.html">Contato</a>
                 </li>
+            </ul>
+            
+            <div class="toggle-dark-buttons">
+                <img src="https://cdn.iconscout.com/icon/free/png-256/sun-2130753-1798521.png" width="32" height="32" class="toggleDark enableLight">
+                <img src="https://cdn.iconscout.com/icon/free/png-256/moon-1716354-1461199.png" width="32" height="32" class="toggleDark enableDark">
+            </div>
+        </nav>
+
+        <nav class="header__nav mobile">
+            <ul>
                 <li>
-                    <img src="https://cdn.iconscout.com/icon/free/png-256/moon-1716354-1461199.png" width="32" height="32" id="toggleDark">
+                    <a href="index.html">Início</a>
+                </li>
+                <li>
+                    <a href="sobre.html">Sobre</a>
+                </li>
+                <li>
+                    <a href="index.html">Posts</a>
+                </li>
+                <li>
+                    <a href="contato.html">Contato</a>
                 </li>
             </ul>
         </nav>
@@ -201,14 +228,37 @@
     </footer>
 
     <script>
-        const $toggleDark = document.querySelector('#toggleDark');
+        const $toggleDark = document.querySelectorAll('.toggleDark');
         const $html = document.querySelector('html');
+        const $toggleMobileNav = document.querySelector('.toggle-mobile-nav');
+        const $navMobile = document.querySelector('.header__nav.mobile');
 
         function toggleDarkTheme() {
-            const 
+            $html.classList.toggle('dark');
+
+            if ($html.classList.has('dark')) {
+                localStorage.setItem('enableDarkTheme', true);
+            }
         }
 
-        $toggleDark.addEventListener('click', toggleDarkTheme);
+        function toggleMobileNav() {
+            if (getComputedStyle($navMobile).display === 'none') {
+                $navMobile.style.display = 'flex';
+            } else {
+                $navMobile.style.display = 'none';
+            }
+        }
+
+        try {
+            if (localStorage.getItem('enableDarkTheme')) {
+                toggleDarkTheme();
+            }
+        } catch (e) {
+            console.log(e);
+        }
+
+        $toggleDark.forEach($el => $el.addEventListener('click', toggleDarkTheme));
+        $toggleMobileNav.addEventListener('click', toggleMobileNav);
     </script>
 </body>
 </html>
