@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" value="no-index, no-follow">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,13 +34,18 @@
                 <li>
                     <a href="contato.html">Contato</a>
                 </li>
+                <li>
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/moon-1716354-1461199.png" width="32" height="32" id="toggleDark">
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="posts">
-            <h1 class="posts__title">Últimos posts</h1>
+            <h1 class="posts__title">
+                Últimos posts
+            </h1>
 
             <article class="post">
                 <div class="post__date">
@@ -50,14 +56,49 @@
                         <div class="post__details">
                             <p>Por <strong>Eren Yeager</strong>, publicado em <strong>1 de março de 885</strong></p>
                         </div>
-                        <h1>Título do post</h1>
+                        <h1>Encapsulamento em POO</h1>
                     </header>
                     <div class="post__body">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum facere eius, nam sapiente est id veritatis dolores voluptas iste quisquam     mollitia natus eveniet nulla iusto vitae ullam perferendis odit.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum facere eius, nam sapiente est id veritatis dolores voluptas iste quisquam     mollitia natus eveniet nulla iusto vitae ullam perferendis odit.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum facere eius, nam sapiente est id veritatis dolores voluptas iste quisquam     mollitia natus eveniet nulla iusto vitae ullam perferendis odit.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum facere eius, nam sapiente est id veritatis dolores voluptas iste quisquam     mollitia natus eveniet nulla iusto vitae ullam perferendis odit.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum facere eius, nam sapiente est id veritatis dolores voluptas iste quisquam     mollitia natus eveniet nulla iusto vitae ullam perferendis odit.</p>
+                        <p>
+                            Usamos esse princípio para juntar, ou <strong>encapsular</strong>, dados e comportamentos relacionados em entidades únicas, que chamamos de objetos.
+                        </p>
+                        <p>
+                            Por exemplo, se quisermos modelar uma entidade do mundo real, por exemplo <strong>Computador</strong>.
+                        </p>
+
+                        <p>
+                            Encapsular é <strong>agregar</strong> todos os <strong>atributos</strong> e <strong>comportamentos</strong> essa Entidade dentro de sua Classe.
+                        </p>
+
+                        <p>
+                            Dessa forma, o mundo exterior não precisa saber como um Computador liga e desliga, ou como ele realiza cálculos matemáticos!
+                        </p>
+
+                        <p>
+                            Basta instanciar um objeto da Classe Computador, e utilizá-lo!
+                        </p>
+
+                        <p>
+                            O princípio do Encapsulamento também afirma que informações importantes devem ser contidas dentro do objeto de maneira privada e apenas informações selecionadas devem ser expostas publicamente.
+                        </p>
+
+                        <img src="https://pythonacademy.com.br/assets/posts/poo-introduction/encapsulamento.png" alt="Exemplificação do encapsulamento em Python">
+
+                        <p>
+                            A implementação e o estado de cada objeto são mantidos de forma privada dentro da definição da Classe.
+                        </p>
+
+                        <p>
+                            Outros objetos não têm acesso a esta classe ou autoridade para fazer alterações.
+                        </p>
+
+                        <p>
+                            Eles só podem chamar uma lista de funções ou métodos públicos.
+                        </p>
+
+                        <p>
+                            Essa característica de ocultação de dados fornece maior segurança ao programa e evita corrupção de dados não intencional.
+                        </p>
                     </div>
                 </div>
             </article>
@@ -70,14 +111,39 @@
                         <div class="post__details">
                             <p>Por <strong>Eren Yeager</strong>, publicado em <strong>1 de março de 885</strong></p>
                         </div>
-                        <h1>Título do post</h1>
+                        <h1>Abstração em POO</h1>
                     </header>
                     <div class="post__body">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum facere eius, nam sapiente est id veritatis dolores voluptas iste quisquam     mollitia natus eveniet nulla iusto vitae ullam perferendis odit.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum facere eius, nam sapiente est id veritatis dolores voluptas iste quisquam     mollitia natus eveniet nulla iusto vitae ullam perferendis odit.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum facere eius, nam sapiente est id veritatis dolores voluptas iste quisquam     mollitia natus eveniet nulla iusto vitae ullam perferendis odit.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum facere eius, nam sapiente est id veritatis dolores voluptas iste quisquam     mollitia natus eveniet nulla iusto vitae ullam perferendis odit.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum facere eius, nam sapiente est id veritatis dolores voluptas iste quisquam     mollitia natus eveniet nulla iusto vitae ullam perferendis odit.</p>
+                        <p>Pense em um Tocador de DVD.</p>
+                        <p>
+                            Ele tem uma placa lógica bastante complexa com diversos circuitos, transistores, capacitores e etc do lado de dentro e apenas alguns botões do lado de fora.
+                        </p>
+
+                        <img src="https://pythonacademy.com.br/assets/posts/poo-introduction/dvd-player.png">
+
+                        <p>
+                            Você apenas clica no botão de “Play” e não se importa com o que acontece lá dentro: o tocador apenas… Toca.
+                        </p>
+
+                        <p>
+                            Ou seja, a complexidade foi “escondida” de você: isto é Abstração na prática!
+                        </p>
+
+                        <p>
+                            O Tocador de DVD abstraiu toda a lógica de como tocar o DVD, expondo apenas botões de controle para o usuário.
+                        </p>
+
+                        <p>
+                            O mesmo se aplica à Classes e Objetos: nós podemos esconder atributos e métodos do mundo exterior. E isso nos traz alguns benefícios!
+                        </p>
+
+                        <p>
+                            Primeiro, a interface para utilização desses objetos é muito mais simples, basta saber quais “botões” utilizar.
+                        </p>
+
+                        <p>
+                            Também reduz o que chamamos de “Impacto da mudança”, isto é: ao se alterar as propriedades internas da classes, nada será alterado no mundo exterior, já que a interface já foi definida e deve ser respeitada.
+                        </p>
                     </div>
                 </div>
             </article>
@@ -90,23 +156,59 @@
                         <div class="post__details">
                             <p>Por <strong>Eren Yeager</strong>, publicado em <strong>1 de março de 885</strong></p>
                         </div>
-                        <h1>Título do post</h1>
+                        <h1>Herança em POO</h1>
                     </header>
                     <div class="post__body">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum facere eius, nam sapiente est id veritatis dolores voluptas iste quisquam     mollitia natus eveniet nulla iusto vitae ullam perferendis odit.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum facere eius, nam sapiente est id veritatis dolores voluptas iste quisquam     mollitia natus eveniet nulla iusto vitae ullam perferendis odit.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum facere eius, nam sapiente est id veritatis dolores voluptas iste quisquam     mollitia natus eveniet nulla iusto vitae ullam perferendis odit.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum facere eius, nam sapiente est id veritatis dolores voluptas iste quisquam     mollitia natus eveniet nulla iusto vitae ullam perferendis odit.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum facere eius, nam sapiente est id veritatis dolores voluptas iste quisquam     mollitia natus eveniet nulla iusto vitae ullam perferendis odit.</p>
+                        <p>Herança é a característica da POO que possibilita a <strong>reutilização de código comum</strong> em uma relação de hierarquia entre Classes.</p>
+                        <p>Vamos utilizar a entidade <strong>Carro</strong> como exemplo.</p>
+                        <p>Agora imagine uma Caminhonete, um Caminhão e uma Moto.</p>
+                        <p>Todos eles são <strong>Automóveis</strong>, correto? Todos possuem característica semelhantes, não é mesmo?</p>
+                        <p>Podemos pensar que Automóveis aceleram, freiam, possuem mecanismo de acionamento de faróis, entre outros.</p>
+                        <p>Uma relação de hierarquia entre as classes poderia ser pensada da seguinte forma:</p>
+                        <p><img src="https://pythonacademy.com.br/assets/posts/poo-introduction/heranca.png" style="max-width: 100%"></p>
+                        <p>Dessa forma podemos modelar os comportamentos semelhantes em uma Classe “pai” <strong>Automóvel</strong> que conterá os atributos e comportamentos comuns.</p>
+                        <p>Através da Herança, as Classes filhas de <strong>Automóvel</strong> vão herdar esses atributos e comportamentos, sem precisar reescrevê-los reduzindo assim o tempo de desenvolvimento!</p>
                     </div>
                 </div>
             </article>
-            
+            <article class="post">
+                <div class="post__date">
+                    <span>1 de mar.</span>
+                </div>
+                <div class="post__main">
+                    <header class="post__header">
+                        <div class="post__details">
+                            <p>Por <strong>Eren Yeager</strong>, publicado em <strong>1 de março de 885</strong></p>
+                        </div>
+                        <h1>Polimorfismo em POO</h1>
+                    </header>
+                    <div class="post__body">
+                        <p>Quando utilizamos <strong>Herança</strong>, teremos Classes filhas utilizando código comum da Classe acima, ou Classe pai.</p>
+                        <p>Ou seja, as Classes vão compartilhar atributos e comportamentos (herdados da Classe acima).</p>
+                        <p>Assim, Objetos de Classes diferentes, terão métodos e atributos compartilhados que podem ter implementações diferentes, ou seja, um método pode possuir várias formas e atributos podem adquirir valores diferentes.</p>
+                        <p>Daí o nome: <strong>Poli</strong> (muitas) <strong>morfismo</strong> (formas).</p>
+                        <p>Para entendermos melhor, vamos utilizar novamente o exemplo da entidade Carro que herda de <strong>Automóvel</strong>.</p>
+                        <p>Suponha agora que <strong>Automóvel</strong> possua a definição do método acelerar().</p>
+                        <p>Por conta do conceito de Polimorfismo, objetos da Classe <strong>Moto</strong> terão uma implementação do método acelerar() que será diferente da implementação desse métodos em instâncias da Classe <strong>Carro</strong>!</p>
+                    </div>
+                </div>
+            </article>
         </section>
     </main>
 
     <footer>
         <p>Blog 2022 &copy;</p>
     </footer>
+
+    <script>
+        const $toggleDark = document.querySelector('#toggleDark');
+        const $html = document.querySelector('html');
+
+        function toggleDarkTheme() {
+            const 
+        }
+
+        $toggleDark.addEventListener('click', toggleDarkTheme);
+    </script>
 </body>
 </html>
