@@ -116,6 +116,8 @@
 
             if ($html.classList.contains('dark')) {
                 localStorage.setItem('enableDarkTheme', true);
+            } else {
+                localStorage.removeItem('enableDarkTheme');
             }
         }
 
